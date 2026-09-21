@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   text-align: justify;
   padding: 2%;
+  z-index: 10;
 }
 
 a {
@@ -24,6 +25,7 @@ a {
 }
 
 .pix-container {
+  position: relative;
   display: grid;
   grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
   width: 100vw;
@@ -41,7 +43,13 @@ a {
 .one,
 .three {
   justify-self: flex-end;
+  z-index: 20;
 }
+
+.two {
+  z-index: 0;
+}
+
 @keyframes swim-right-to-left {
   0% {
     transform: translate(0, 0);
