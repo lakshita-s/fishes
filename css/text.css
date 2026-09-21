@@ -1,4 +1,3 @@
-/* text css grid */
 body {
   background-color: rgb(1, 11, 39);
   background: url("../images/ocean2.jpeg") no-repeat center center fixed;
@@ -17,6 +16,7 @@ a {
   font-weight: bold;
 }
 
+/* text css grid */
 .info-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -65,7 +65,8 @@ a {
   pointer-events: none;
 }
 
-/* AI!!! hover logic - used claude for this, bc i couldnt figure out how to make the links work under the images myself */
+/* AI!!! hover logic - used claude for this, bc i couldnt figure out how to make the links work under the images myself, z-index
+was contradicting itself */
 
 /* If the 1st text column is hovered, fade out ALL images in the 1st overlay cell */
 .info-container:has(.info:nth-child(1):hover)

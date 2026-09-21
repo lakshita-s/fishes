@@ -1,4 +1,4 @@
-//to stop fish swimming + change page
+//TO STOP FISH SWIMMING + CHANGE PAGE
 const fishElements = document.querySelectorAll(".fish");
 console.log(fishElements);
 
@@ -6,6 +6,7 @@ fishElements.forEach(function (fish) {
   fish.addEventListener("click", function () {
     fish.classList.remove("swim");
 
+    //if there is no element left with both fish AND swim class = all fish clicked, change page
     const swimmingFish = document.querySelectorAll(".fish.swim");
     if (swimmingFish.length === 0) {
       allFishClicked();
@@ -17,7 +18,7 @@ function allFishClicked() {
   window.location.href = "pages/text.html";
 }
 
-//to mutliply gifs
+//TO MULTIPLY GIFS
 //grabs parent div, so new gifs can be inserted here
 const gifContainer = document.querySelector(".gif-collage");
 
@@ -41,6 +42,7 @@ function attachClickHandler(gif) {
     //after gif is added, updates total with new gifs
     gifCount += toAdd;
 
+    // if the count reaches 60; change page
     if (gifCount >= 60) {
       window.location.href = "../index.html";
     }
@@ -49,6 +51,7 @@ function attachClickHandler(gif) {
 
 //grabs gifs, calls attachclickhandler
 document.querySelectorAll(".gif").forEach(attachClickHandler);
+
 
 //AUDIO -- used claude for this!
 document.addEventListener("DOMContentLoaded", () => {
