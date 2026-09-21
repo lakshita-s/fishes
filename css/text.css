@@ -1,0 +1,92 @@
+/* text css grid */
+body {
+  background-color: rgb(1, 11, 39);
+  background: url("../images/ocean2.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  color: white;
+  font-size: 15px;
+  text-align: justify;
+  font-family: "receipt-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: rgb(255, 225, 0);
+  font-weight: bold;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+}
+
+.info {
+  padding: 10px;
+}
+
+/* images css grid */
+.overlay-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  box-sizing: border-box;
+  padding: 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+.overlay {
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.overlay img {
+  width: 100%;
+  object-fit: contain;
+  opacity: 1;
+  padding: 30px;
+  transition: opacity 0.4s ease-in-out 0.1s;
+  pointer-events: none;
+}
+
+/* AI!!! hover logic - used claude for this, bc i couldnt figure out how to make the links work under the images myself */
+
+/* If the 1st text column is hovered, fade out ALL images in the 1st overlay cell */
+.info-container:has(.info:nth-child(1):hover)
+  + .overlay-container
+  .overlay:nth-child(1)
+  img {
+  opacity: 0;
+}
+
+/* If the 2nd text column is hovered, fade out ALL images in the 2nd overlay cell */
+.info-container:has(.info:nth-child(2):hover)
+  + .overlay-container
+  .overlay:nth-child(2)
+  img {
+  opacity: 0;
+}
+
+/* If the 3rd text column is hovered, fade out ALL images in the 3rd overlay cell */
+.info-container:has(.info:nth-child(3):hover)
+  + .overlay-container
+  .overlay:nth-child(3)
+  img {
+  opacity: 0;
+}

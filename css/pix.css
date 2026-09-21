@@ -1,0 +1,117 @@
+body {
+  background: url("../images/ocean1.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: "receipt-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 21vw;
+  display: flex;
+  color: red;
+  font-size: 16px;
+  text-align: justify;
+  padding: 2%;
+}
+
+a {
+  color: yellow;
+}
+
+.pix-container {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.pix-container img {
+  max-width: 50vw;
+  object-fit: contain;
+}
+
+.one,
+.three {
+  justify-self: flex-end;
+}
+@keyframes swim-right-to-left {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-12.5vw, -5vh);
+  }
+  25% {
+    transform: translate(-25vw, 0);
+  }
+  37.5% {
+    transform: translate(-37.5vw, 5vh);
+  }
+  50% {
+    transform: translate(-50vw, 0);
+  }
+  62.5% {
+    transform: translate(-62.5vw, -5vh);
+  }
+  75% {
+    transform: translate(-75vw, 0);
+  }
+  87.5% {
+    transform: translate(-87.5vw, 5vh);
+  }
+  100% {
+    transform: translate(-100vw, 0);
+  }
+}
+
+@keyframes swim-left-to-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(12.5vw, 5vh);
+  }
+  25% {
+    transform: translate(25vw, 0);
+  }
+  37.5% {
+    transform: translate(37.5vw, -5vh);
+  }
+  50% {
+    transform: translate(50vw, 0);
+  }
+  62.5% {
+    transform: translate(62.5vw, 5vh);
+  }
+  75% {
+    transform: translate(75vw, 0);
+  }
+  87.5% {
+    transform: translate(87.5vw, -5vh);
+  }
+  100% {
+    transform: translate(100vw, 0);
+  }
+}
+.one,
+.three {
+  animation-name: swim-right-to-left;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.two {
+  animation-name: swim-left-to-right;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}

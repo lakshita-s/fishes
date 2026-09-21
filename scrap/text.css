@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(1, 11, 39);
+    background: url('../images/ocean.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    font-family: "pangolin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    width: 100vw;
+    height: 100vh;
+}
+
+.info {
+    padding: 10px;
+}
+
+
+
+/* new */
+
+.info.overlay-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* Lock text wrapper and image to exact same coordinates */
+.info.overlay-box > * {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* Keep the text resting behind */
+.info.overlay-box .text-content {
+    z-index: 1;
+}
+
+/* Position the fish image directly over the text */
+.overlay {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps the fish image in its original proportions */
+    pointer-events: none; /* Allows text links to be clicked straight through the image */
+}
+
+

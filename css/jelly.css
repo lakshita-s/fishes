@@ -1,0 +1,93 @@
+body {
+  background: url("../images/ocean3.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: "receipt-narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 10;
+  color: white;
+  font-size: 26px;
+  font-weight: 1000;
+}
+
+.text-1 {
+  padding-left: 2%;
+  align-self: baseline;
+}
+
+.text-2 {
+  align-self: center;
+}
+
+.text-3 {
+  padding-right: 2%;
+  align-self: last baseline;
+  text-align: end;
+}
+
+a {
+  color: rgb(153, 255, 80);
+  font-style: italic;
+  font-size: 29px;
+  text-decoration: none;
+}
+
+.jelly-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.jelly-container img {
+  max-width: 35vw;
+  object-fit: contain;
+}
+
+@keyframes jellyfish-swim {
+  0% {
+    transform: translateX(0vw);
+    transform: translateY(0vh);
+  }
+  20% {
+    transform: translateX(10vw);
+    transform: translateY(10vh);
+  }
+  40% {
+    transform: translateX(20vw);
+    transform: translateY(20vh);
+  }
+  60% {
+    transform: translateX(10vw);
+    transform: translateY(10vh);
+  }
+  80% {
+    transform: translateX(0vw);
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateX(-10vw);
+    transform: translateY(-10vh);
+  }
+}
+
+.swim {
+  animation-name: jellyfish-swim;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
