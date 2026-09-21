@@ -20,7 +20,7 @@ function allFishClicked() {
 
 //TO MULTIPLY GIFS
 //grabs parent div, so new gifs can be inserted here
-const gifContainer = document.querySelector(".gif-collage");
+const gifContainer = document.querySelector(".gif-container");
 
 //gets the count of gifs
 let gifCount = document.querySelectorAll(".gif").length;

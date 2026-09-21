@@ -35,17 +35,16 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   box-sizing: border-box;
   padding: 10px;
-
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 10;
-
   pointer-events: none;
 }
 
+/* flexbox within css grid */
 .overlay {
   box-sizing: border-box;
   padding: 10px;
