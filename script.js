@@ -14,7 +14,7 @@ fishElements.forEach(function (fish) {
 });
 
 function allFishClicked() {
-  window.location.href = "/pages/text.html";
+  window.location.href = "pages/text.html";
 }
 
 //to mutliply gifs
@@ -42,7 +42,7 @@ function attachClickHandler(gif) {
     gifCount += toAdd;
 
     if (gifCount >= 60) {
-      window.location.href = "/index.html";
+      window.location.href = "../index.html";
     }
   });
 }
